@@ -1,0 +1,58 @@
+DROP DATABASE IF EXISTS bms;
+CREATE DATABASE IF NOT EXISTS bms;
+USE bms;
+
+
+
+CREATE TABLE account(
+    id_account INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    email VARCHAR(20),
+    passwordA VARCHAR(20)
+);
+
+INSERT INTO account VALUES(NULL,'Ahmad@gmail.com','233');
+INSERT INTO account VALUES(NULL,'Nadia@gmail.com','2343');
+INSERT INTO account VALUES(NULL,'Rami@gmail.com','463');
+INSERT INTO account VALUES(NULL,'Khaled@gmail.com','492');
+
+
+CREATE TABLE client(
+     id_client INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+     first_name VARCHAR(20),
+     last_name VARCHAR(30),
+     id_account INT,
+     CONSTRAINT client_FORIGN_KEY2 FOREIGN KEY (id_account) REFERENCES account(id_account)
+);
+INSERT INTO client VALUES(NULL,'Ahmad','Omar',1);
+INSERT INTO client VALUES(NULL,'Nadia','Rami',2);
+INSERT INTO client VALUES(NULL,'Rami','Tamer',3);
+INSERT INTO client VALUES(NULL,'Khaled','Samer',4);
+
+CREATE TABLE process(
+     id_process INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+     name VARCHAR(50)
+);
+
+INSERT INTO process VALUES(NULL,'Create account');
+INSERT INTO process VALUES(NULL,'Pay');
+INSERT INTO process VALUES(NULL,'Withdraw');
+INSERT INTO process VALUES(NULL,'Transfer');
+
+
+CREATE TABLE Client_records(
+   id_Client_records INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    valuemoney INT,
+   dateCR DATE,
+    Hour time,
+   id_process INT,
+   id_client INT,
+          CONSTRAINT Client_records_FORIGN_KEY1 FOREIGN KEY (id_process) REFERENCES process(id_process),
+     CONSTRAINT Client_records_FORIGN_KEY2 FOREIGN KEY (id_client) REFERENCES client(id_client)
+);
+INSERT INTO Client_records VALUES (NULL,0,'2022-1-1','09:10',1,1);
+INSERT INTO Client_records VALUES (NULL,0,'2022-3-4','09:10',1,2);
+INSERT INTO Client_records VALUES (NULL,0,'2022-3-2','09:10',1,3);
+INSERT INTO Client_records VALUES (NULL,0,'2022-2-6','09:10',1,4);
+INSERT INTO Client_records VALUES (NULL,2000,'2022-5-2','09:10',2,1);
+INSERT INTO Client_records VALUES (NULL,5000,'2022-6-2','09:10',2,1);
+INSERT INTO Client_records VALUES (NULL,5000,'2022-6-6','09:10',2,2);

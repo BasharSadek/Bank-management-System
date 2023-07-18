@@ -1,0 +1,222 @@
+
+:root {
+  --main-color: #ddd;
+  --shadow-color: rgba(138, 170, 229, 0.3);
+  --secondary-color: rgb(138, 170, 229);
+}
+/* **************** Css Reset *********** */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 10px;
+}
+.img{
+  width: 34px;
+  height: 34px;
+} 
+.img-bank{
+  width: 46px;
+  height: 46px;
+}
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* ****************Header*********** */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+}
+.left-section {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-logout{
+  padding: 12px;
+  border: 10px;
+  border-radius: 6px;
+  background-color: black;
+  color: #f9f9f9;
+  font-size: 20px;
+  border: 10px;
+  width: 100px;
+}
+.btn-logout:hover{
+ color:  black;
+ background-color: #d4c8c8;
+ border: 10px;
+ transition: 0.6s;
+ cursor: pointer;
+}
+.left-section .bank-logo {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.left-section .logo-shield {
+  width: 110px;
+  margin-left: 16px;
+  font-size: 2rem;
+  color: rgba(1, 14, 21, 0.921);
+  letter-spacing: 5px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.right-section a {
+  padding: 18px 0px 0px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 50px;
+  transition: 0.2s;
+}
+.left-section .bank-logo:hover,
+.left-section .logo-shield:hover,
+.right-section a:hover {
+  border-bottom: 2px solid;
+  color: black;
+}
+/* ****************Navbar*********** */
+.content-area {
+  height: calc(100vh - 56px);
+  display: flex;
+  background-color: #f9f9f9;
+}
+aside {
+  height: 100%;
+  width: 380px;
+  background-color: white;
+  overflow-y: auto;
+}
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 15px;
+}
+
+nav form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+nav form label {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+  margin: 10px;
+}
+nav form .header-form {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  margin: 35px 8px;
+  padding: 20px 0px;
+  letter-spacing: 2px;
+  border-top: 1px solid;
+  text-align: center;
+}
+nav form input {
+  width: 80%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: black;
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  /* text-align: left; */
+  margin: 15px 10px 10px;
+}
+nav form .submit {
+  width: 50%;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  border: 1px solid;
+  border-radius: 999px;
+  box-shadow: 0 0 5px 2px rgb(0 0 0 / 30%) inset;
+  outline: none;
+  padding: 5px 25px;
+  margin: 25px 10px 10px;
+  background-color: var(--main-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+nav form .submit:hover {
+  background-color: rgb(120, 167, 211);
+  color: rgba(0, 0, 0, 0.8);
+  transition: 0.4s;
+}
+/* Main */
+main {
+  width: 100%;
+  height: 100%;
+  padding: 35px 15px;
+  border-top: 1px solid #ddd;
+  background-color: white;
+  overflow-y: auto;
+}
+.left-contain {
+  width: 50%;
+  height: 100%;
+  padding: 35px;
+  /* border-top: 1px solid #ddd; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.left-contain .hello-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 80vh;
+}
+.left-contain .hello-container .hello {
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 40px 10px;
+  color:blue;
+}
+.left-contain .hello-container .details {
+  font-size: 2rem;
+  line-height: 35px;
+  margin: 30px 0px;
+  text-align: justify;
+}
+
+.left-contain .hello-container hr {
+  height: 1px;
+  width: 90%;
+  color: rgb(138, 170, 229);
+  margin: 50px 0px 10px;
+}
+.right-contain {
+  width: 50%;
+  height: 100%;
+  padding: 35px 15px;
+  /* border-top: 1px solid #ddd; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.right-contain img {
+  width: 400px;
+  margin: 0 20px;
+}
